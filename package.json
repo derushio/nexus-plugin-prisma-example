@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "ts-node-dev src/main.ts",
         "migrate": "echo 'マイグレーション名を入力' && read MIGRATION_NAME && prisma migrate dev --name $MIGRATION_NAME && yarn generate",
+        "migration": "prisma migrate dev && yarn generate",
         "generate": "prisma generate"
     },
     "dependencies": {
