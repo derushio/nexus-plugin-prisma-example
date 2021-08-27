@@ -78,6 +78,7 @@ export interface NexusGenInputs {
   PostCreateInput: { // input type
     User: NexusGenInputs['UserCreateNestedOneWithoutPostsInput']; // UserCreateNestedOneWithoutPostsInput!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    desc: string; // String!
     title: string; // String!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
@@ -92,6 +93,7 @@ export interface NexusGenInputs {
   }
   PostCreateWithoutUserInput: { // input type
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    desc: string; // String!
     title: string; // String!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
@@ -102,6 +104,7 @@ export interface NexusGenInputs {
   }
   PostOrderByInput: { // input type
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    desc?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
     title?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -112,6 +115,7 @@ export interface NexusGenInputs {
     NOT?: NexusGenInputs['PostScalarWhereInput'][] | null; // [PostScalarWhereInput!]
     OR?: NexusGenInputs['PostScalarWhereInput'][] | null; // [PostScalarWhereInput!]
     createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+    desc?: NexusGenInputs['StringFilter'] | null; // StringFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
     title?: NexusGenInputs['StringFilter'] | null; // StringFilter
     updatedAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
@@ -120,11 +124,13 @@ export interface NexusGenInputs {
   PostUpdateInput: { // input type
     User?: NexusGenInputs['UserUpdateOneRequiredWithoutPostsInput'] | null; // UserUpdateOneRequiredWithoutPostsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    desc?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
   PostUpdateManyMutationInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    desc?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
@@ -150,6 +156,7 @@ export interface NexusGenInputs {
   }
   PostUpdateWithoutUserInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    desc?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
@@ -164,6 +171,7 @@ export interface NexusGenInputs {
     OR?: NexusGenInputs['PostWhereInput'][] | null; // [PostWhereInput!]
     User?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
     createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+    desc?: NexusGenInputs['StringFilter'] | null; // StringFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
     title?: NexusGenInputs['StringFilter'] | null; // StringFilter
     updatedAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
@@ -294,6 +302,7 @@ export interface NexusGenFieldTypes {
   }
   Post: { // field return type
     createdAt: NexusGenScalars['DateTime']; // DateTime!
+    desc: string; // String!
     id: number; // Int!
     title: string; // String!
     updatedAt: NexusGenScalars['DateTime']; // DateTime!
@@ -327,6 +336,7 @@ export interface NexusGenFieldTypeNames {
   }
   Post: { // field return type name
     createdAt: 'DateTime'
+    desc: 'String'
     id: 'Int'
     title: 'String'
     updatedAt: 'DateTime'

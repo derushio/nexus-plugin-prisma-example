@@ -28,6 +28,7 @@ const schema = makeSchema({
             columns: [
                 'id',
                 'title',
+                'desc',
                 'userId',
                 'createdAt',
                 'updatedAt',

@@ -79,6 +79,7 @@ input NestedStringFilter {
 
 type Post {
   createdAt: DateTime!
+  desc: String!
   id: Int!
   title: String!
   updatedAt: DateTime!
@@ -88,6 +89,7 @@ type Post {
 input PostCreateInput {
   User: UserCreateNestedOneWithoutPostsInput!
   createdAt: DateTime
+  desc: String!
   title: String!
   updatedAt: DateTime
 }
@@ -105,6 +107,7 @@ input PostCreateOrConnectWithoutUserInput {
 
 input PostCreateWithoutUserInput {
   createdAt: DateTime
+  desc: String!
   title: String!
   updatedAt: DateTime
 }
@@ -117,6 +120,7 @@ input PostListRelationFilter {
 
 input PostOrderByInput {
   createdAt: SortOrder
+  desc: SortOrder
   id: SortOrder
   title: SortOrder
   updatedAt: SortOrder
@@ -128,6 +132,7 @@ input PostScalarWhereInput {
   NOT: [PostScalarWhereInput!]
   OR: [PostScalarWhereInput!]
   createdAt: DateTimeFilter
+  desc: StringFilter
   id: IntFilter
   title: StringFilter
   updatedAt: DateTimeFilter
@@ -137,12 +142,14 @@ input PostScalarWhereInput {
 input PostUpdateInput {
   User: UserUpdateOneRequiredWithoutPostsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  desc: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input PostUpdateManyMutationInput {
   createdAt: DateTimeFieldUpdateOperationsInput
+  desc: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
@@ -172,6 +179,7 @@ input PostUpdateWithWhereUniqueWithoutUserInput {
 
 input PostUpdateWithoutUserInput {
   createdAt: DateTimeFieldUpdateOperationsInput
+  desc: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
@@ -188,6 +196,7 @@ input PostWhereInput {
   OR: [PostWhereInput!]
   User: UserWhereInput
   createdAt: DateTimeFilter
+  desc: StringFilter
   id: IntFilter
   title: StringFilter
   updatedAt: DateTimeFilter
